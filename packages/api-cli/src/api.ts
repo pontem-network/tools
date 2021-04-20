@@ -150,7 +150,42 @@ async function getCallInfo (): Promise<CallInfo> {
   assert(endpoint && endpoint.includes('.'), 'You need to specify the command to execute, e.g. query.system.account');
 
   const provider = new WsProvider(ws);
-  const api = await ApiPromise.create({ provider, types: readTypes() });
+  const api = await ApiPromise.create({ provider,
+    rpc: {
+      mvm: {
+        gasToWeight: {
+          description: 'Convert gas to Weight',
+          params: [
+            {
+              name: 'gas',
+              type: 'u64'
+            },
+            {
+              isOptional: true,
+              name: 'at',
+              type: 'Hash'
+            }
+          ],
+          type: 'Weight'
+        },
+        weightToGas: {
+          description: 'Convert Weight to gas',
+          params: [
+            {
+              name: 'weight',
+              type: 'Weight'
+            },
+            {
+              isOptional: true,
+              name: 'at',
+              type: 'Hash'
+            }
+          ],
+          type: 'u64'
+        }
+      }
+    },
+    types: readTypes() });
   const apiExt = api as unknown as ApiExt;
   const [type, section, method] = endpoint.split('.') as [keyof ApiExt, string, string];
 
