@@ -181,11 +181,62 @@ async function getCallInfo (): Promise<CallInfo> {
               type: 'Hash'
             }
           ],
-          type: 'u64'
+          type: 'Estimation'
+        },
+        estimateGasExecute: {
+          description: 'Estimate gas for script execution',
+          params: [
+            {
+              name: 'account',
+              type: 'AccountId'
+            },
+            {
+              name: 'script_bc',
+              type: 'Vec<u8>'
+            },
+            {
+              name: 'gas_limit',
+              type: 'u64'
+            },
+            {
+              isOptional: true,
+              name: 'at',
+              type: 'Hash'
+            }
+          ],
+          type: 'Estimation'
+        },
+        estimateGasPublish: {
+          description: 'Estimate gas for publish module',
+          params: [
+            {
+              name: 'account',
+              type: 'AccountId'
+            },
+            {
+              name: 'module_bc',
+              type: 'Vec<u8>'
+            },
+            {
+              name: 'gas_limit',
+              type: 'u64'
+            },
+            {
+              isOptional: true,
+              name: 'at',
+              type: 'Hash'
+            }
+          ],
+          type: 'Estimation'
         }
       }
     },
-    types: readTypes() });
+    types: Object.assign(readTypes(), {
+      Estimation: {
+        gas_used: 'u64',
+        status_code: 'u64',
+      }
+    }) });
   const apiExt = api as unknown as ApiExt;
   const [type, section, method] = endpoint.split('.') as [keyof ApiExt, string, string];
 

@@ -21,12 +21,12 @@
     "lint": "polkadot-dev-run-lint",
     "clean": "polkadot-dev-clean-build",
     "postinstall": "polkadot-dev-yarn-only",
-    "run:api": "./packages/api-cli/src/index.cjs",
-    "run:json": "./packages/json-serve/src/index.cjs",
-    "run:metadata": "./packages/metadata-cmp/src/index.cjs",
-    "run:monitor": "./packages/monitor-rpc/src/index.cjs",
-    "run:signer": "./packages/signer-cli/src/index.cjs",
-    "run:vanity": "./packages/vanitygen/src/index.cjs",
+    "run:api": "./packages/api-cli/build/index.cjs",
+    "run:json": "./packages/json-serve/build/index.cjs",
+    "run:metadata": "./packages/metadata-cmp/build/index.cjs",
+    "run:monitor": "./packages/monitor-rpc/build/index.cjs",
+    "run:signer": "./packages/signer-cli/build/index.cjs",
+    "run:vanity": "./packages/vanitygen/build/index.cjs",
     "test": "echo \"no tests\""
   },
   "devDependencies": {
