@@ -5,11 +5,14 @@
       "**/build/**/*"
     ],
     "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
       "baseUrl": ".",
       "paths": {
         "pontem-cli": [ "./src" ],
       },
-      "skipLibCheck": true
+      "skipLibCheck": true,
+      "outDir": "./build/",
     }
   }
   

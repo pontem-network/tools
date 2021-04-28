@@ -6,10 +6,16 @@ Fork of [@polkadot/api](https://github.com/polkadot-js/api).
 
 ## Usage
 
+Install:
+
+```
+npm install -g pontem-cli
+```
+
 Commands are of the form,
 
 ```
-yarn run:api [options] <type> <...params>
+pontem-cli [options] <type> <...params>
 ```
 
 Where type is the type of query to be made, this takes the form of `<type>.<section>.<method>` where `type` is one of `consts`, `derive`, `query`, `rpc` `tx` (mapping to the API) and the `section` and `method` are available calls.
@@ -17,19 +23,19 @@ Where type is the type of query to be made, this takes the form of `<type>.<sect
 For instance to make a query to retrieve Alice's balances, you can do
 
 ```
-yarn run:api query.system.account 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+pontem-cli query.system.account 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
 ```
 
 To do the same, running as a subscription and streaming results
 
 ```
-yarn run:api query.system.account 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY --sub
+pontem-cli query.system.account 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY --sub
 ```
 
 To make a transfer from Alice to Bob, the following can be used -
 
 ```
-yarn run:api tx.balances.transfer 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty 12345 --seed "//Alice"
+pontem-cli tx.balances.transfer 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty 12345 --seed "//Alice"
 ```
 
 ### Files as Parameters
@@ -44,19 +50,10 @@ The `sudo` example demonstrates this.
 Some transactions require superuser access. For example, to change the runtime code, you can do
 
 ```
-yarn run:api --sudo --seed "//Alice" tx.system.setCode @test.wasm
+pontem-cli --sudo --seed "//Alice" tx.system.setCode @test.wasm
 ```
 
 In all cases when sudoing, the seed provided should be that of the superuser. For most development nets, that is `"//Alice"`.
-
-
-## Global Installation
-
-```
-$ yarn global add @polkadot/api-cli
-$ polkadot-js-api ...
-```
-
 
 ## Other options
 

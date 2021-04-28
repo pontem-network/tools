@@ -6,19 +6,27 @@
 
 # @polkadot/tools
 
+This if fork of [Polkadot JS Tools](https://github.com/polkadot-js/tools).
+ 
 This is a collection of cli tools to use on Polkadot and Substrate chains.
 
 ## Overview
 
 The repo is split up into a number of internal packages -
 
-- [@polkadot/api-cli](packages/api-cli/) A cli tool to allow you to make API calls to any running node
+- [pontem-cli](packages/api-cli/) CLI for Pontem Network.
 - [@polkadot/json-serve](packages/json-serve/) A server that serves JSON outputs for specific queries
 - [@polkadot/monitor-rpc](packages/monitor-rpc/) A simple monitoring interface that checks the health of a remote node via RPC
 - [@polkadot/signer-cli](packages/signer-cli/) A cli tool that allows you to generate transactions in one terminal and sign them in another terminal (or computer)
 - [@polkadot/vanitygen](packages/vanitygen/) Generate vanity addresses, matching some pattern
 
 ## Installation
+
+To install Pontem CLI:
+
+```
+npm install -g pontem-cli
+```
 
 You can install the packages globally via npm, i.e.
 

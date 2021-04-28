@@ -5,7 +5,7 @@
   "main": "index.cjs",
   "sideEffects": false,
   "bin": {
-    "pontem-cli": "build/index.cjs"
+    "pontem-cli": "build/api.js"
   },
   "scripts": {
     "build": "tsc"

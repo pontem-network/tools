@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // Copyright 2018-2021 @polkadot/api-cli authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
