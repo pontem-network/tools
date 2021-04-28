@@ -1,6 +1,6 @@
 {
   "name": "pontem-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A commandline API interface for interacting with a chain",
   "main": "index.cjs",
   "sideEffects": false,
@@ -8,8 +8,7 @@
     "pontem-cli": "build/api.js"
   },
   "scripts": {
-    "build": "tsc",
-    "postinstall": "tsc"
+    "build": "tsc"
   },
   "author": "Pontem Foundation",
   "maintainers": [],
