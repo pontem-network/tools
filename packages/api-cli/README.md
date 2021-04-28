@@ -1,7 +1,8 @@
-# @polkadot/api-cli
+# pontem-cli
 
-A simple cli interface to the [@polkadot/api](https://github.com/polkadot-js/api).
+A simple cli interface to the Pontem network.
 
+Fork of [@polkadot/api](https://github.com/polkadot-js/api).
 
 ## Usage
 

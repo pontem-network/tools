@@ -235,6 +235,35 @@ async function getCallInfo (): Promise<CallInfo> {
       Estimation: {
         gas_used: 'u64',
         status_code: 'u64',
+      },
+      MoveModuleId: {
+        address: "AccountId",
+        name: "Text"
+      },
+      MoveTypeTag: {
+        _enum: [
+          "Bool",
+          "U8",
+          "U64",
+          "U128",
+          "Address",
+          "Signer",
+          "Vector",
+          "Struct"
+        ],
+        Bool: null,
+        U8: null,
+        U64: null,
+        U128: null,
+        Address: null,
+        Signer: null,
+        Vector: "MoveTypeTag",
+        Struct: "MoveStructTag"
+      },
+      MoveStructTag: {
+        address: "AccountId",
+        module: "Text",
+        name: "Text"
       }
     }) });
   const apiExt = api as unknown as ApiExt;
