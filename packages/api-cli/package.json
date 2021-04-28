@@ -1,6 +1,6 @@
 {
   "name": "pontem-cli",
-  "version": "0.32.2-7",
+  "version": "0.1.0",
   "description": "A commandline API interface for interacting with a chain",
   "main": "index.cjs",
   "sideEffects": false,
