@@ -266,7 +266,14 @@ async function getCallInfo (): Promise<CallInfo> {
         address: "AccountId",
         module: "Text",
         name: "Text"
-      }
+      },
+      "AccountId": "GenericAccountId",
+      "AccountIdOf": "AccountId",
+      "Balance": "u128",
+      "Address": "AccountId",
+      "LookupSource": "AccountId",
+      "RawAccountAddress": "[u8;32]",
+      "AccountAddress": "[u8;32]"
     }) });
   const apiExt = api as unknown as ApiExt;
   const [type, section, method] = endpoint.split('.') as [keyof ApiExt, string, string];
