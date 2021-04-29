@@ -270,8 +270,8 @@ async function getCallInfo (): Promise<CallInfo> {
       "AccountId": "GenericAccountId",
       "AccountIdOf": "AccountId",
       "Balance": "u128",
-      "Address": "AccountId",
-      "LookupSource": "AccountId",
+      "Address": "MultiAddress",
+      "LookupSource": "MultiAddress",
       "RawAccountAddress": "[u8;32]",
       "AccountAddress": "[u8;32]"
     }) });
